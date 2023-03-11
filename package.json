@@ -1,0 +1,109 @@
+{
+  "name": "Reminder",
+  "displayName": "事件提醒",
+  "description": "配置一项提醒事件吧，比如：久座提醒，喝水提醒，事件提醒等",
+  "publisher": "reminder",
+  "version": "0.0.1",
+  "author": {
+    "name": "Chetserenade"
+  },
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "keywords": [
+    "事件提醒",
+    "久座提醒",
+    "喝水提醒",
+    "Reminder"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "bugs": {
+    "url": "https://github.com/formulahendry/vscode-ycy/issues",
+    "email": "510374040@qq.com"
+  },
+  "homepage": "https://github.com/Microsoft/vscode-wordcount/blob/master/README.md",
+  "repository": {
+    "url": "https://github.com/cmstead/js-refactor.git",
+    "type": "git"
+  },
+  "activationEvents": [
+    "onCommand:extension.start",
+    "onWebviewPanel:extension.start",
+    "*"
+  ],
+  "icon": "./src/images/time.png",
+  "galleryBanner": {
+    "color": "#C2FFD4",
+    "theme": "dark"
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "keybindings": [{
+      "command": "extension.start",
+      "key": "ctrl+f1",
+      "mac": "cmd+f1",
+      "when": "inputFocus"
+    }],
+    "commands": [{
+      "command": "extension.start",
+      "title": "Reminder"
+    }],
+    "configuration": {
+      "type": "object",
+      "title": "ReminderSetting",
+      "properties": {
+        "reminder.interval": {
+          "type": "number",
+          "default": 1,
+          "description": "提醒间隔（分钟）"
+        },
+        "reminder.title": {
+          "type": "string",
+          "default": "起来稍微活动一分钟或者喝一点水吧！",
+          "description": "提示内容"
+        },
+        "reminder.motif": {
+          "type": "string",
+          "default": "REST TIME",
+          "description": "主旨"
+        },
+        "reminder.picture": {
+          "type": "array",
+          "default": [
+            "https://static.surmon.me/thumbnail/leave-china.jpg"
+          ],
+          "description": "设置图片地址"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.76.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5",
+    "ts-loader": "^9.4.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "@vscode/test-electron": "^2.2.3"
+  }
+}

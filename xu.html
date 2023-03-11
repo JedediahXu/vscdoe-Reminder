@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(#494180, #243b55);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loginBox {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .box {
+      height: 175px;
+      font-size: 70px;
+      color: #fff;
+      font-weight: bold;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box-title {
+      height: 117px;
+      font-size: 88px;
+      color: #45A3DB;
+      font-weight: bold;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box-text {
+      height: 60px;
+      font-size: 21px;
+      color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box-img {
+      height: 400px;
+      margin-top: 20px;
+      background-color: aquamarine;
+      width: 600px;
+      margin: 0 auto;
+      margin-top: 20px;
+      border-radius: 13px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="loginBox">
+    <div class="box">
+    </div>
+    <div class="box-title">
+      REST TIME
+    </div>
+    <div class="box-text">
+      起来稍微活动一分钟或者喝一点水吧！
+    </div>
+    <div class="box-img">
+      <img src="${imagePath}">
+    </div>
+  </div>
+</body>
+<script>
+  function getTime() {
+    var date = new Date();
+    var year = date.getFullYear(); //获取年份
+    var month = date.getMonth() + 1; //获取月份
+    var day = date.getDate(); //获取日期
+    var hour = date.getHours(); //获取小时
+    hour = hour < 10 ? '0' + hour : hour;
+    var minute = date.getMinutes(); // 获取分
+    minute = minute < 10 ? '0' + minute : minute;
+    var seconds = date.getSeconds(); //获取秒
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    return month + '月' + day + '日&nbsp;' + hour + ':' + minute + ':' + seconds;
+  }
+
+  setInterval(function () {
+    document.querySelector('.box').innerHTML = getTime();
+  }, 1000)
+
+</script>
+
+
+</html>
