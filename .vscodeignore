@@ -2,7 +2,6 @@
 .vscode-test/**
 out/test/**
 out/**/*.map
-src/**
 .gitignore
 tsconfig.json
 vsc-extension-quickstart.md

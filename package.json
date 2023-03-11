@@ -1,8 +1,8 @@
 {
-  "name": "Reminder",
+  "name": "EventReminder",
   "displayName": "事件提醒",
   "description": "配置一项提醒事件吧，比如：久座提醒，喝水提醒，事件提醒等",
-  "publisher": "reminder",
+  "publisher": "chetserenade",
   "version": "0.0.1",
   "author": {
     "name": "Chetserenade"
@@ -20,12 +20,12 @@
     "Other"
   ],
   "bugs": {
-    "url": "https://github.com/formulahendry/vscode-ycy/issues",
+    "url": "https://github.com/ChetSerenade/vscdoe-Reminder/issues",
     "email": "510374040@qq.com"
   },
-  "homepage": "https://github.com/Microsoft/vscode-wordcount/blob/master/README.md",
+  "homepage": "https://github.com/ChetSerenade/vscdoe-Reminder/README.md",
   "repository": {
-    "url": "https://github.com/cmstead/js-refactor.git",
+    "url": "https://github.com/ChetSerenade/vscdoe-Reminder",
     "type": "git"
   },
   "activationEvents": [
@@ -33,7 +33,7 @@
     "onWebviewPanel:extension.start",
     "*"
   ],
-  "icon": "./src/images/time.png",
+  "icon": "time.png",
   "galleryBanner": {
     "color": "#C2FFD4",
     "theme": "dark"
