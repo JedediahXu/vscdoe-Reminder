@@ -3,7 +3,7 @@
   "displayName": "EventReminder",
   "description": "配置一项提醒事件，如：久座提醒，喝水提醒等",
   "publisher": "chetserenade",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Chetserenade"
   },
@@ -40,16 +40,20 @@
   },
   "main": "./dist/extension.js",
   "contributes": {
-    "keybindings": [{
-      "command": "extension.start",
-      "key": "ctrl+f1",
-      "mac": "cmd+f1",
-      "when": "inputFocus"
-    }],
-    "commands": [{
-      "command": "extension.start",
-      "title": "Reminder"
-    }],
+    "keybindings": [
+      {
+        "command": "extension.start",
+        "key": "ctrl+f1",
+        "mac": "cmd+f1",
+        "when": "inputFocus"
+      }
+    ],
+    "commands": [
+      {
+        "command": "extension.start",
+        "title": "Reminder"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "ReminderSetting",
