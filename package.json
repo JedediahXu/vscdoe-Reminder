@@ -8,7 +8,7 @@
     "name": "Chetserenade"
   },
   "engines": {
-    "vscode": "^1.76.0"
+    "vscode": "^1.68.0"
   },
   "keywords": [
     "事件提醒",
@@ -40,20 +40,16 @@
   },
   "main": "./dist/extension.js",
   "contributes": {
-    "keybindings": [
-      {
-        "command": "extension.start",
-        "key": "ctrl+f1",
-        "mac": "cmd+f1",
-        "when": "inputFocus"
-      }
-    ],
-    "commands": [
-      {
-        "command": "extension.start",
-        "title": "Reminder"
-      }
-    ],
+    "keybindings": [{
+      "command": "extension.start",
+      "key": "ctrl+f1",
+      "mac": "cmd+f1",
+      "when": "inputFocus"
+    }],
+    "commands": [{
+      "command": "extension.start",
+      "title": "Reminder"
+    }],
     "configuration": {
       "type": "object",
       "title": "ReminderSetting",
