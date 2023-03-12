@@ -1,9 +1,9 @@
-# Change Log
+## CHANGELOG
 
-All notable changes to the "Reminder" extension will be documented in this file.
+### v0.0.1 (2023-03-11)
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+* Initial Release
 
-## [Unreleased]
 
-- Initial release
+
+

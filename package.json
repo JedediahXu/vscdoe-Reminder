@@ -1,9 +1,9 @@
 {
   "name": "EventReminder",
-  "displayName": "事件提醒",
-  "description": "配置一项提醒事件吧，比如：久座提醒，喝水提醒，事件提醒等",
+  "displayName": "Reminder",
+  "description": "配置一项提醒事件，如：久座提醒，喝水提醒等",
   "publisher": "chetserenade",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Chetserenade"
   },
@@ -56,7 +56,7 @@
       "properties": {
         "reminder.interval": {
           "type": "number",
-          "default": 1,
+          "default": 60,
           "description": "提醒间隔（分钟）"
         },
         "reminder.title": {
@@ -67,12 +67,12 @@
         "reminder.motif": {
           "type": "string",
           "default": "REST TIME",
-          "description": "主旨"
+          "description": "主题"
         },
         "reminder.picture": {
           "type": "array",
           "default": [
-            "https://static.surmon.me/thumbnail/leave-china.jpg"
+            "https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg"
           ],
           "description": "设置图片地址"
         }
