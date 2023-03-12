@@ -3,7 +3,7 @@
   "displayName": "EventReminder",
   "description": "配置一项提醒事件，如：久座提醒，喝水提醒等",
   "publisher": "chetserenade",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": {
     "name": "Chetserenade"
   },
