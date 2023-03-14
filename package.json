@@ -35,25 +35,21 @@
   ],
   "icon": "time.png",
   "galleryBanner": {
-    "color": "#EFF1F3",
+    "color": "#14181D",
     "theme": "dark"
   },
   "main": "./dist/extension.js",
   "contributes": {
-    "keybindings": [
-      {
-        "command": "extension.start",
-        "key": "ctrl+f1",
-        "mac": "cmd+f1",
-        "when": "inputFocus"
-      }
-    ],
-    "commands": [
-      {
-        "command": "extension.start",
-        "title": "Reminder"
-      }
-    ],
+    "keybindings": [{
+      "command": "extension.start",
+      "key": "ctrl+f1",
+      "mac": "cmd+f1",
+      "when": "inputFocus"
+    }],
+    "commands": [{
+      "command": "extension.start",
+      "title": "Reminder"
+    }],
     "configuration": {
       "type": "object",
       "title": "ReminderSetting",

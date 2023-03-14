@@ -139,15 +139,15 @@ export class Reminder {
         </body>
         <script>
           function getTime() {
-            var date = new Date();
-            var year = date.getFullYear(); //获取年份
-            var month = date.getMonth() + 1; //获取月份
-            var day = date.getDate(); //获取日期
-            var hour = date.getHours(); //获取小时
+            let date = new Date();
+            let year = date.getFullYear(); //获取年份
+            let month = date.getMonth() + 1; //获取月份
+            let day = date.getDate(); //获取日期
+            let hour = date.getHours(); //获取小时
             hour = hour < 10 ? '0' + hour : hour;
-            var minute = date.getMinutes(); // 获取分
+            let minute = date.getMinutes(); // 获取分
             minute = minute < 10 ? '0' + minute : minute;
-            var seconds = date.getSeconds(); //获取秒
+            let seconds = date.getSeconds(); //获取秒
             seconds = seconds < 10 ? '0' + seconds : seconds;
             return month + '月' + day + '日&nbsp;' + hour + ':' + minute + ':' + seconds;
           }
